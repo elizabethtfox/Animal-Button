@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Animal Buttons</title>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="jumbotron text-center" id="jumbotron">
+        <h1 id="title">Gifs for days!</h1>
+        <p>Click a button to enjoy some one of life's guilty pleasures! </p>
+        <p>Click any image to make it move.</p>
+        <p>Don't like what you see? Search for whatever you'd like.</p>
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-xs-9">
+                    <div class="btn-group" role="group" id="newButtonDiv"></div>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                    <input type="text" class="form-control"  placeholder="Search" >
+                </div>
+                <div class="col-md-1 col-xs-1">
+                    <input class="btn btn-default" type="button" value="Search" id="searchBtn">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Div to hold images -->
+<div class="container">
+    <div class="grid">
+        <div id="gifs-appear-here"></div>
+    </div>
+</div>
+
+
+</body>
+
+<!-- Javascript -->
+<script type="text/javascript" src="animalbutton.js"></script>
+
+</html>
