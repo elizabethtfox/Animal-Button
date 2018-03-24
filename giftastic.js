@@ -10,7 +10,7 @@ $(document).ready(function() {
             newButton.attr("type", "button");
             newButton.append(topics[i]);
             newButton.attr("value", topics[i]);
-            $("#newButtonDiv").append(newButton);
+            $("#itemButton").append(newButton);
 
             console.log(topics);
         }
@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     // AJAX to get the API info
     function getGifs(topic) {
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=dc6zaTOxFJmzC&limit=8";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=dc6zaTOxFJmzC&limit=10";
 
         console.log(queryURL);
 
@@ -79,14 +79,14 @@ $(document).ready(function() {
 
     $("#searchBtn").on("click", function() {
         //If search bar is empty
-        event.preventDefault();
+        event.preventDefault(); //prevents the page from refreshing when a user hits "enter".
 
         var searchWord = $(".form-control").val();
         console.log(searchWord);
         $(".form-control").empty();
 
         topics.push(searchWord);
-        $("#newButtonDiv").empty();
+        $("#itemButton").empty();
         displayButtons();
         getGifs(searchWord);
     });
